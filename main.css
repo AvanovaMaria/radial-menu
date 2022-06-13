@@ -1,0 +1,123 @@
+  body {
+    font-family: 'Gentium Plus', serif;
+  }
+
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .jumping-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    background-color: #bce983;
+    border-top-right-radius: 100%;
+    border: none;
+    box-shadow: grey 0 16px 36px;
+    transition: border-top-right-radius 2s;
+  }
+
+  .jumping-item:hover {
+    border-top-right-radius: 0;
+  }
+  
+  .fading-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    background-color: #8a89cb;
+    border-top-left-radius: 100%;
+    border: none;
+  }
+
+  .fading-item .text-new,
+  .fading-item .text-old {
+    position: absolute;
+    transition: opacity 2s linear;
+  }
+
+  .fading-item .text-new {
+    opacity: 0;
+  }
+
+  .fading-item:hover .text-old {
+    opacity: 0;
+  }
+
+  .fading-item:hover .text-new {
+    opacity: 1;
+  }
+
+  .gradient-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    background:  #33ccff;
+    border-bottom-right-radius: 100%;
+    border: none;
+    box-shadow: grey 0 10px 36px;
+    position: relative;
+  }
+
+  .gradient-item:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-bottom-right-radius: 100%;
+    background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 90%);
+    opacity: 0;
+    transition: 2s;
+  }
+
+  .gradient-item:hover:before {
+    opacity: 1;
+  }
+
+  .gradient-item .text {
+    transition: opacity 1s linear;
+  }
+
+  .gradient-item:hover .text {
+    opacity: 0;
+  }
+
+  .menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    background-color: #ff99cc;
+    border-bottom-left-radius: 100%;
+    border: none;
+  }
+
+  .menu-item .list,
+  .menu-item .title {
+    position: absolute;
+    transition: opacity 1s linear;
+  }
+
+  .menu-item .list {
+    opacity: 0;
+  }
+
+  .menu-item:hover .title {
+    opacity: 0;
+  }
+
+  .menu-item:hover .list {
+    opacity: 1;
+  }
+
